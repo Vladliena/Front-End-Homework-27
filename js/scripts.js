@@ -1,13 +1,13 @@
-function addition (x) {
-    return function(y) {
-        return x + y;
+function addition (){
+    let sum = 0;
+    return function counter (add){
+        sum += add
+        console.log(sum)
+        return sum
     };
 }
 
-const add3 = addition(3);
-const add5 = addition(5);
-const add20 = addition(20);
-
-console.log(add3(0));
-console.log(add5(3));
-console.log(add20(8));
+const add = addition();
+add(3)
+add(5)
+add(20)
